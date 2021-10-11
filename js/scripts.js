@@ -7,10 +7,10 @@ let	pokemonList=[
 	// define pokemons by their heights
 for (let i=0; i < pokemonList.length; i++ ) {
 	if (pokemonList[i].height > 1.5){
-		console.log(pokemonList[i].name + ' height '+ pokemonList[i].height + '  Wow big pokemon!' )
+		document.write(pokemonList[i].name + ' ( height ' + pokemonList[i].height + ' ) Wow big pokemon! <br>' )
 	}else if (pokemonList[i].height < 0.5){
-		console.log(pokemonList[i].name + ' height: '+ pokemonList[i].height + ' oh small pokemon')
+		document.write(pokemonList[i].name + ' ( height: ' + pokemonList[i].height + ' ) oh small pokemon! <br>')
 	}else {
-		console.log(pokemonList[i].name + ' height: '+ pokemonList[i].height + ' :) I am medium')
+		document.write(pokemonList[i].name + ' ( height: ' + pokemonList[i].height + ' )  I am medium :)! <br>')
 	}
 }
