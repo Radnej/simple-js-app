@@ -18,7 +18,6 @@ let pokemonRepository = (function () {
   };
 })();
 console.log(pokemonRepository.getAll()); 
-document.write(pokemonRepository.getAll()); 
 pokemonRepository.add({ name: '' , heigt: '' , types: ''});
 
 pokemonRepository.getAll().forEach(function(pokemon) {
