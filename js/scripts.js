@@ -1,4 +1,6 @@
 let pokemonRepository = (function () {
+  let pokemonList=[];
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=50'
   let modalContainer = document.querySelector('#modal-container');
   function showModal(pokemon) {
     modalContainer.innerHTML = '';
@@ -34,9 +36,52 @@ let pokemonRepository = (function () {
     let modalContainer = document.querySelector('#modal-container');
     modalContainer.classList.remove('is-visible');
   }
-  
-  let pokemonList=[];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=50'
+
+  function showDialog(title, text) {
+  showModal(title, text);
+  let modalContainer = document.querySelector('#modal-container');
+  let modal = modalContainer.querySelector('.modal');
+
+  let confirmButton = document.createElement('button');
+  confirmButton.classList.add('modal-confirm');
+  confirmButton.innerText = 'Confirm';
+
+  let cancelButton = document.createElement('button');
+  cancelButton.classList.add('modal-cancel');
+  cancelButton.innerText = 'Cancel';
+
+  modal.appendChild(confirmButton);
+  modal.appendChild(cancelButton);
+
+  confirmButton.focus();
+
+  return new Promise((resolve, reject) => {
+    cancelButton.addEventListener('click', () => {
+    hideModal();
+    reject();
+  })
+  confirmButton.addEventListener('click', () => {
+    hideModal();
+    resolve();
+  })
+  });
+}
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+      hideModal();
+    }
+  });
+  modalContainer.addEventListener('click', (e) => {
+    let target = e.target;
+    if (target === modalContainer) {
+      hideModal();
+    }
+  });
+
+  document.querySelector('#show-modal').addEventListener('click', () => {
+    showModal('Modal title', 'This is the modal content!');
+  });
 
   function add(pokemon) {
     pokemonList.push(pokemon);
@@ -54,13 +99,16 @@ let pokemonRepository = (function () {
     button.classList.add("button-class");
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
-    button.addEventListener('click', function(event) {
-    showDetails(pokemon);
-});
+    button.addEventListener('click', function(event) { 
+    });
   }
 
   function showDetails(pokemon){
-    console.log(pokemon)
+    loadDetails(pokemon).then(function () {
+      //console.log(pokemon);
+      showModal(pokemon);
+    });
+    
   }
 
   function loadList() {
