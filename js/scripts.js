@@ -100,6 +100,7 @@ window.addEventListener('keydown', (e) => {
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
     button.addEventListener('click', function(event) { 
+      showDetails(pokemon);
     });
   }
 
@@ -139,12 +140,6 @@ window.addEventListener('keydown', (e) => {
     }).catch(function (e) {
       console.error(e);
     })
-  }
-
-  function showDetails(pokemon) {
-    loadDetails(pokemon).then(function () {
-      console.log(pokemon);
-    });
   }
 
   return {
