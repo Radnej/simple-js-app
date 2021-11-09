@@ -33,12 +33,10 @@ let pokemonRepository = (function () {
   }
 
   function hideModal() {
-    let modalContainer = document.querySelector('#modal-container');
     modalContainer.classList.remove('is-visible');
   }
 
-  function showDialog(title, text) {
-  showModal(title, text);
+  function showModal(title, text) {
   let modalContainer = document.querySelector('#modal-container');
   let modal = modalContainer.querySelector('.modal');
 
