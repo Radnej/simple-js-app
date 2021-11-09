@@ -35,36 +35,7 @@ let pokemonRepository = (function () {
   function hideModal() {
     modalContainer.classList.remove('is-visible');
   }
-
-  function showModal(title, text) {
-  let modalContainer = document.querySelector('#modal-container');
-  let modal = modalContainer.querySelector('.modal');
-
-  let confirmButton = document.createElement('button');
-  confirmButton.classList.add('modal-confirm');
-  confirmButton.innerText = 'Confirm';
-
-  let cancelButton = document.createElement('button');
-  cancelButton.classList.add('modal-cancel');
-  cancelButton.innerText = 'Cancel';
-
-  modal.appendChild(confirmButton);
-  modal.appendChild(cancelButton);
-
-  confirmButton.focus();
-
-  return new Promise((resolve, reject) => {
-    cancelButton.addEventListener('click', () => {
-    hideModal();
-    reject();
-  })
-  confirmButton.addEventListener('click', () => {
-    hideModal();
-    resolve();
-  })
-  });
-}
-
+  
 window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
       hideModal();
