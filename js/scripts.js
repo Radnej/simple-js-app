@@ -48,9 +48,7 @@ window.addEventListener('keydown', (e) => {
     }
   });
 
-  document.querySelector('#show-modal').addEventListener('click', () => {
-    showModal('Modal title', 'This is the modal content!');
-  });
+ 
 
   function add(pokemon) {
     pokemonList.push(pokemon);
