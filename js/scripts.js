@@ -64,7 +64,6 @@ window.addEventListener('keydown', (e) => {
     listpokemon.classList.add('list-group-item');
     let button = document.createElement("button");
     button.innerText = pokemon.name;
-    button.classList.add("button-class");
     button.classList.add('button-class', 'btn', "btn-primary");
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
