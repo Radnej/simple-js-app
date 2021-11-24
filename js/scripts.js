@@ -1,59 +1,22 @@
 let pokemonRepository = (function () {
   let pokemonList=[];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=50'
-  let modalContainer = document.querySelector('#modal-container');
-  function showModal(pokemon) {
-    modalContainer.innerHTML = '';
-    let modal = document.createElement('div');
-    modal.classList.add('modal');
-
-    let closeButtonElement = document.createElement('button');
-    closeButtonElement.classList.add('modal-close');
-    closeButtonElement.innerText = 'X';
-    closeButtonElement.style.fontSize = "40px"
-    closeButtonElement.addEventListener('click', hideModal);
-
-    let titleElement = document.createElement('p');
-    titleElement.innerText = pokemon.name;
-    titleElement.style.textTransform = 'uppercase';
-
-    let contentElement = document.createElement('p');
-    contentElement.innerText = ('Height: ') + pokemon.height;
-
-    let imgElement = document.createElement('img');
-    imgElement.src = pokemon.imageUrl
-
-    modal.appendChild(closeButtonElement);
-    modal.appendChild(titleElement);
-    modal.appendChild(contentElement);
-    modal.appendChild(imgElement)
-
-    modalContainer.appendChild(modal);
-    modalContainer.classList.add('is-visible');
-  }
-
-  function hideModal() {
-    modalContainer.classList.remove('is-visible');
-  }
-  
-window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-      hideModal();
-    }
-  });
-  modalContainer.addEventListener('click', (e) => {
-    let target = e.target;
-    if (target === modalContainer) {
-      hideModal();
-    }
-  });
-
- 
 
   function add(pokemon) {
     pokemonList.push(pokemon);
   }
+function showModal(pokemon){
+  let modalBody = document.querySelector(".modal-body");
+  let modalTitle = document.querySelector(".modal-title");
+  let modalHeader = document.querySelector(".modal-header");
 
+  modalTitle.empty();
+  modalBody.empty();
+
+  let nameElement = document.createElement('h1');
+
+
+}
   function getAll() {
     return pokemonList;
   }

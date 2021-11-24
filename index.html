@@ -11,9 +11,25 @@
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Navbar</a>
     </nav>
-    <ul class='pokemon-list list-group'></ul>
-    <div id='modal-container'></div>
-    <script
+    <ul class='pokemon-list list-group'></ul>    
+
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="lableModal1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="lableModal1">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Some random modal
+      </div>
+    </div>
+  </div>
+</div>
+
+<script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
