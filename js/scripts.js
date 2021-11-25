@@ -28,15 +28,15 @@ let pokemonRepository = (function () {
 
 function showModal(pokemon){
   let modalBody = document.querySelector(".modal-body");
-  let nameElement = document.createElement('p');
- nameElement.innerText = pokemon.name;
+  modalBody.innerHTML = '';
  let heightElement = document.createElement('p');
  heightElement.innerText = "Height" + pokemon.height;
  let imgElement = document.createElement('img');
  imgElement.src = pokemon.imageUrl
- modalBody.appendChild(nameElement);
  modalBody.appendChild(heightElement);
  modalBody.appendChild(imgElement);
+ let modalTitle = document.querySelector(".modal-title");
+ modalTitle.innerText = pokemon.name
 }
 
 
