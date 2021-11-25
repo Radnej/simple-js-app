@@ -1,4 +1,4 @@
-html, 
+html,
 body {
   font-family: Arial, sans-serif;
 }
@@ -6,11 +6,11 @@ body {
 
 .button-class {
   background-color: #6C8DA7; /* Green */
-     width: 100%;
+  width: 100%;
 }
 
 .pokemon-list {
   max-width: 400px;
   margin: 0 auto;
   padding-top: 50px;
-  }
+}
