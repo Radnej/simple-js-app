@@ -6,14 +6,7 @@ let pokemonRepository = (function () {
     pokemonList.push(pokemon);
   }
 function showModal(pokemon){
-  let modalBody = document.querySelector(".modal-body");
-  let modalTitle = document.querySelector(".modal-title");
-  let modalHeader = document.querySelector(".modal-header");
-
-  modalTitle.empty();
-  modalBody.empty();
-
-  let nameElement = document.createElement('h1');
+ 
 
 
 }
@@ -28,6 +21,8 @@ function showModal(pokemon){
     let button = document.createElement("button");
     button.innerText = pokemon.name;
     button.classList.add('button-class', 'btn', "btn-primary");
+    button.dataset.toggle = 'modal';
+    button.dataset.target = '#modal1';
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
     button.addEventListener('click', function(event) { 
