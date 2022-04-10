@@ -21,6 +21,7 @@ let pokemonRepository = (function () {
     button.dataset.target = '#modal1';
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
+    // eslint-disable-next-line no-unused-vars
     button.addEventListener('click', function(event) {
       showDetails(pokemon);
     });
