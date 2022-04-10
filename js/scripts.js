@@ -1,3 +1,4 @@
+
 let pokemonRepository = (function () {
   let pokemonList=[];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=50'
@@ -94,3 +95,7 @@ pokemonRepository.loadList().then(function(){
     pokemonRepository.addListItem(pokemon);
   });
 });
+alert('Hello world');
+let favoriteFood = 'Pizza';
+document.write(favoriteFood);
+
