@@ -27,22 +27,24 @@ img.pokemon__portrait {
   border-radius: 50px;
   transition: transform 0.3s ease;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   font-size: 1.25rem;
   position: relative;
-  margin: 32px;
   border: none;
 }
 
 .pokemon-list {
   list-style-type: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   text-align: center;
   grid-row-gap: 50px;
   grid-column-gap: 100px;
   align-items: center;
   margin: auto;
+}
+.list-group {
+  text-align: ;
 }
 
 .list-group-item {
