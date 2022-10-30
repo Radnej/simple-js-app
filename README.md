@@ -1,4 +1,16 @@
-Pokedex App
+# Pokedex-App
 
-This is my first JavaScript project.
-It consists of a Pokedex app that will retrieve information from an API to display on a usable app. It uses JS, HTML and CSS, and with external libraries like Bootstrap and JQuery, it ensures a better looking and smoother performing app. You can search for any pokemon on the top right!
+## Project description
+Pokedex app is a simple app that lists 151 Pokémon by name. Clicking on a Pokémon entry displays more details about the Pokémon including a picture of the Pokémon in a modal. All data is loaded from the PokeAPI via Ajax. In the app Pokémon can be searched by their names.
+
+## Built With
+- JavaScript
+- JQuery
+- Bootstrap
+- HTML / CSS
+
+## Dependencies
+- [PokeAPI](https://pokeapi.co/)
+- Bootstrap
+- [promise-polyfill](https://github.com/taylorhakes/promise-polyfill)
+- [fetch polyfill](https://github.com/github/fetch)
