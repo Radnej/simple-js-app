@@ -16,6 +16,9 @@ Pokedex app is a simple app that lists 50 Pokémon by name. Clicking on a Pokém
 
 ## Tools used
 - [PokeAPI](https://pokeapi.co/)
-- Bootstrap
 - [promise-polyfill](https://github.com/taylorhakes/promise-polyfill)
 - [fetch polyfill](https://github.com/github/fetch)
+
+## How to use this repo
+
+- Clone this repository and start making changes with the editor of your choice. However, this project is implemented using VS Code editor
