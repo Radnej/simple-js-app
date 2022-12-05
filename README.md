@@ -14,7 +14,7 @@ Pokedex app is a simple app that lists 50 Pokémon by name. Clicking on a Pokém
 - Bootstrap
 - HTML / CSS
 
-## Tools used
+## Dependencies
 - [PokeAPI](https://pokeapi.co/)
 - [promise-polyfill](https://github.com/taylorhakes/promise-polyfill)
 - [fetch polyfill](https://github.com/github/fetch)
