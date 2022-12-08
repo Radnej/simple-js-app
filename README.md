@@ -8,7 +8,7 @@ Pokedex app is a simple app that lists 50 Pokémon by name. Clicking on a Pokém
 ![Pokdex](https://user-images.githubusercontent.com/91905344/202285756-1ebe14c7-92a6-42fb-931a-d505e21f5c64.gif)
 Live version: [Pokedex App](https://radnej.github.io/simple-js-app/)
 
-## Built With
+## Technologies Used
 - JavaScript
 - JQuery
 - Bootstrap
